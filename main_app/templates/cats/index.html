@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <hr />
+    {% for cat in cats %}
+        <a href="/cats/{{cat.id}}">
+            <p>Name: {{ cat.name }}</p>
+        </a>
+        {% if cat.age > 0 %}
+            <p>Age: {{ cat.age }}</p>
+        {% else %}
+            <p>Age: Kitten</p>    
+        {% endif %}
+        <p>Breed: {{ cat.breed }}</p>
+        <p>Description: {{ cat.description }}</p>
+        <hr />
+    {% endfor %}
+{% endblock %}
