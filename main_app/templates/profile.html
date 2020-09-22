@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>{{ username }}'s Collection:</h1>
+    {% for cat in cats %}
+        <a href="/cats/{{cat.id}}">
+            <h3>{{ cat.name }}</h3>
+        </a>
+    {% endfor %}
+
+{% endblock %}

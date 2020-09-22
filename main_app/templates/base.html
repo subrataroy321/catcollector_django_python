@@ -9,7 +9,26 @@
     <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
-    <a href="/">
+    <header>
+        {% if user.is_authenticated %}
+            <span>
+                <a href="{% url 'profile' user.username %}">Hello {{user.username}}</a>
+            </span>
+            <span>|</span>
+            <span>
+                <a href="{% url 'logout' %}">Logout</a>
+            </span>
+        {% else %}
+            <span>
+                <a href="{% url 'login' %}">Login</a>
+            </span>
+            <span>|</span>
+            <span>
+                <a href="{% url 'signup' %}">Signup</a>
+            </span>
+        {% endif %}
+    </header>
+    <a href="{% url 'cats_index' %}">
         <h1>catcollector</h1>
     </a>
     <hr />
@@ -17,7 +36,6 @@
     {% block content %}
 
     {% endblock %}
-
 
     <footer>
         All Rights Reserved, catcollector 2018
