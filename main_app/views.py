@@ -61,7 +61,7 @@ def profile(request, username):
 @method_decorator(login_required, name='dispatch')
 class CatCreate(CreateView):
     model = Cat
-    fields = '__all__'
+    fields = ['name', 'breed', 'age', 'description']
     #success_url = '/cats/'
 
     def form_valid(self, form):

@@ -2,7 +2,6 @@
 {% load static %}
 {% block content %}
     <a href="/cats/create">Add a New Cat!</a>
-        
     <hr />
     {% for cat in cats %}
         <a href="/cats/{{cat.id}}">
