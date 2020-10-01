@@ -190,4 +190,4 @@ else:
    # No cache for all other hosts
    pass
 
-ALLOWEDHOSTS += ipaddresses()
+ALLOWED_HOSTS += ipaddresses()
