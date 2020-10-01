@@ -189,5 +189,3 @@ if DJANGO_HOST == "production":
 else: 
    # No cache for all other hosts
    pass
-
-ALLOWED_HOSTS += ipaddresses()
