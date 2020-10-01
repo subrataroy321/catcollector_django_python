@@ -59,7 +59,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # DEBUG = True
 
 ALLOWED_HOSTS = [
-    'https://subrata-catcollector.herokuapp.com'
+    'https://subrata-catcollector.herokuapp.com',
 ]
 
 
